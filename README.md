@@ -1,6 +1,18 @@
 # k8s Playground
 
-## Using Directly Minikube
+## local setup
+
+* `pipenv shell`
+* `pipenv install`
+* `flask --app app run`
+
+## docker image
+
+* `docker build -t <tag> .`
+* `docker run port:port <image-name>`
+* `docker push <remote-image-name>:tag`  you need to have previouly a registry created in docker and `<remote-image-name>:tag` has to fit the name there
+  
+## Using minikube to run the image (directly)
 
 Check [minikubbe documentation](https://minikube.sigs.k8s.io/docs/handbook/control) for a quickstart:
 
@@ -16,3 +28,7 @@ Excerpt
 
 * Open the exposed endpoint in the browser
 `minikube service hello-minikube`
+
+## Using Minikube to run the image through manifest
+
+// pending
